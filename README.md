@@ -22,5 +22,5 @@ The autocomplete input currently uses GitHub's user search API for querying user
 8. finalize operator is used to set the loading indicator to false when the request gets answered
 
 **Further improvements/ still working on**
-- Isolating the autocomplete from app component
-- Making the isolated autocomplete component reusable
+- Isolating the autocomplete component from app component
+- Making the isolated autocomplete component reusable with generics
