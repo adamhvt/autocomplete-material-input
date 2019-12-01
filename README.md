@@ -24,3 +24,4 @@ The autocomplete input currently uses GitHub's user search API for querying user
 **Further improvements/ still working on**
 - Isolating the autocomplete component from app component
 - Making the isolated autocomplete component reusable with generics
+- Creating a Web Component so the component could be used independently from Angular
