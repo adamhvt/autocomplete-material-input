@@ -1,5 +1,5 @@
 # autocomplete-material-input
-An autocomplete input built with Angular, RxJS and Material design using asynchronous REST API.
+An autocomplete input built with Angular, RxJS and Material design using asynchronous REST API and TypeScript generics.
 
 The main idea behind this component is to find a proper solution for an optimized and user friendly autocomplete input.
 The autocomplete input currently uses GitHub's user search API for querying users based on the given input.

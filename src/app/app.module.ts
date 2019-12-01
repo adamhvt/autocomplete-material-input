@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './material.module';
 import { ProfileCardComponent } from './shared/components/profile-card/profile-card.component';
+import { AutocompleteInputComponent } from './shared/components/autocomplete-input/autocomplete-input/autocomplete-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AutocompleteInputComponent,
     ProfileCardComponent
   ],
   imports: [

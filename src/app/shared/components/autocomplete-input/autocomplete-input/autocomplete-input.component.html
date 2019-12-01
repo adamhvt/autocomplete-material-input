@@ -1,0 +1,16 @@
+<form class="example-form" [formGroup]='usersForm'>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Choose a user" [matAutocomplete]="auto" formControlName='userInput'>
+  </mat-form-field>
+
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+    <mat-option *ngIf="isLoading" class="is-loading">
+      <mat-spinner diameter="50"></mat-spinner>
+    </mat-option>
+    <ng-container *ngIf="!isLoading">
+      <mat-option *ngFor="let item of filteredItems" [value]="item" (onSelectionChange)="onUserSelected($event)">
+        <span>{{ item[displayWith] }}</span>
+      </mat-option>
+    </ng-container>
+  </mat-autocomplete>
+</form>

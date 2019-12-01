@@ -30,6 +30,12 @@ export interface IGitHubUserResponse {
   total_count: number;
 }
 
+export interface IGitHubAPIResponse<T> {
+  incomplete_results: boolean;
+  items: Array<T>;
+  total_count: number;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -37,7 +43,7 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
 
-  search(filter: { name: string }): Observable<IGitHubUserResponse> {
-    return this.http.get<IGitHubUserResponse>(`https://api.github.com/search/users?q=${filter.name}`);
+  search<T>(filter: { name: string }): Observable<IGitHubAPIResponse<T>> {
+    return this.http.get<IGitHubAPIResponse<T>>(`https://api.github.com/search/users?q=${filter.name}`);
   }
 }
